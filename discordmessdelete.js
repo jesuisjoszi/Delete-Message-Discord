@@ -1033,7 +1033,7 @@
             });
         }
         let fullQueue = [];
-        if (channelIdInput) fullQueue.push({ channelId: channelIdInput, alert: true }); 
+        if (channelIdInput) fullQueue.push({ channelId: channelIdInput, alert: true });
         for (const q of queue) {
             if (q.channelId !== channelIdInput) fullQueue.push(q);
         }
@@ -1259,7 +1259,7 @@
                 }
             }
 
-            if (queueIdx > 0) { 
+            if (queueIdx > 0) {
               queueStatus[queueIdx-1] = 'done';
               renderQueue();
             }
@@ -1286,7 +1286,7 @@
         const old = document.querySelector('.salvation-root');
         if (old) old.remove();
         createDiscordLikeGUI();
-        setTimeout(bindEvents, 0); 
+        setTimeout(bindEvents, 0);
         console.log('[!!!!!!!!!!] test123456', document.querySelector('.salvation-root'));
     } catch (e) {
         console.error('? cwel:', e);
@@ -1799,7 +1799,7 @@
 
     let autoFillIds = { server: true, channel: true, author: true };
     function fillIdsFromUrl() {
-        if (isDeleting) return; 
+        if (isDeleting) return;
         if (!autoFillIds.server && !autoFillIds.channel && !autoFillIds.author) return;
         const m = location.pathname.match(/channels\/([\w@]+)\/(\d+)/);
         if (m) {
